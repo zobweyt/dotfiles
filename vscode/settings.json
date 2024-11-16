@@ -1,0 +1,141 @@
+{
+  // * Window:
+  "window.commandCenter": false,
+  "window.dialogStyle": "native",
+  "window.menuBarVisibility": "hidden",
+  "window.title": "${activeEditorShort}",
+
+  // * Breadcrumbs:
+  "breadcrumbs.enabled": false,
+
+  // * Workbench:
+  "workbench.activityBar.location": "default",
+  "workbench.colorCustomizations": {
+    "scrollbar.shadow": "#00000000"
+  },
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+  "workbench.layoutControl.enabled": false,
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.settings.editor": "json",
+  "workbench.statusBar.visible": false,
+  "workbench.tips.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.indent": 19,
+
+  // * Editor:
+  "editor.bracketPairColorization.enabled": false,
+  "editor.cursorSurroundingLines": 7,
+  "editor.detectIndentation": true,
+  "editor.foldingImportsByDefault": false,
+  "editor.fontFamily": "'Jetbrains Mono', 'Monaspace Neon', 'Fira Code', monospace",
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
+  "editor.fontSize": 14,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.insertSpaces": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "selection",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
+  "editor.wordBasedSuggestions": "off",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  // "editor.rulers": [120],
+  // "editor.rulers": [72, 80, 100, 120],
+  
+  // * Terminal:
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "args": [
+        "-NoLogo"
+      ]
+    }
+  },
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "terminal.integrated.shellIntegration.enabled": false,
+
+  // * Explorer:
+  "explorer.autoReveal": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrderLexicographicOptions": "unicode",
+
+  // * Files:
+  "files.associations": {
+    ".babelrc": "jsonc",
+    ".eslintrc": "jsonc",
+    ".prettierrc": "jsonc",
+    "*.bats": "shellscript",
+    "*.pyi": "python"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.coverage": true,
+    "**/.DS_Store": true,
+    "**/.idea": true,
+    "**/.mypy_cache": true,
+    "**/.netlify": true,
+    "**/.pdm-python": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true,
+    "**/.venv": true,
+    "**/.vercel": true,
+    "**/.vs": true,
+    "**/*.lock": true,
+    "**/bin": true,
+    "**/node_modules/**": true,
+    "**/obj": true,
+    "**/pnpm-lock.yaml": true
+  },
+
+  // * Debug:
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.console.closeOnEnd": true,
+  "debug.console.collapseIdenticalLines": true,
+  "debug.inlineValues": "on",
+
+  // * Git:
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  // * TODO:
+  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+  "todo-tree.general.showActivityBarBadge": true,
+  "todo-tree.highlights.enabled": false,
+  "todo-tree.tree.scanMode": "workspace only",
+  "todo-tree.tree.showCurrentScanMode": false,
+  "todo-tree.tree.tagsOnly": true,
+
+  // * Python:
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUnknownVariableType": "none",
+    "reportUnknownMemberType": "none",
+    "reportMissingTypeStubs": "none"
+  },
+  "python.analysis.typeCheckingMode": "strict",
+  "python.terminal.activateEnvironment": false,
+
+  // * Security:
+  "security.workspace.trust.enabled": false,
+
+  // * Telemetry:
+  "telemetry.telemetryLevel": "off"
+}

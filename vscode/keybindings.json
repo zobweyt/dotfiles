@@ -1,0 +1,42 @@
+[
+  // * Explorer:
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "explorer.newFolder",
+    "when": "!editorFocus"
+  },
+
+  // * Terminal:
+  {
+    "key": "ctrl+alt+`",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+
+  // * Search:
+  {
+    "key": "f3",
+    "command": "editor.action.nextSelectionMatchFindAction",
+    "when": "editorFocus && editorHasSelection"
+  },
+  {
+    "key": "ctrl+f3",
+    "command": "-editor.action.nextSelectionMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "f3",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus && !editorHasSelection"
+  },
+  {
+    "key": "f3",
+    "command": "-editor.action.nextMatchFindAction",
+    "when": "editorFocus"
+  }
+]
