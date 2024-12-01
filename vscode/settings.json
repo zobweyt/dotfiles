@@ -13,7 +13,7 @@
   "workbench.colorCustomizations": {
     "scrollbar.shadow": "#00000000"
   },
-  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.editorActionsLocation": "default",
   "workbench.editor.showTabs": "multiple",
   "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
   "workbench.layoutControl.enabled": false,
@@ -123,6 +123,9 @@
   "todo-tree.tree.tagsOnly": true,
 
   // * Python:
+  "[python]": {
+    "editor.tabSize": 4
+  },
   "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.diagnosticSeverityOverrides": {
@@ -137,5 +140,5 @@
   "security.workspace.trust.enabled": false,
 
   // * Telemetry:
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
 }
