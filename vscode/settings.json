@@ -1,7 +1,7 @@
 {
   // * Window:
   "window.commandCenter": false,
-  "window.dialogStyle": "native",
+  "window.dialogStyle": "custom",
   "window.menuBarVisibility": "hidden",
   "window.title": "${activeEditorShort}",
 
