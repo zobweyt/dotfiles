@@ -159,7 +159,8 @@
     "app.config.ts": "solid"
   },
   "catppuccin-icons.associations.extensions": {
-    "tsx": "solid"
+    "tsx": "solid",
+    "jsx": "solid",    
   },
 
   // * Security:
