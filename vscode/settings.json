@@ -5,19 +5,18 @@
   "window.menuBarVisibility": "hidden",
   "window.title": "${activeEditorShort}",
 
-  // * Breadcrumbs:
-  "breadcrumbs.enabled": false,
-
   // * Workbench:
   "workbench.activityBar.location": "default",
   "workbench.colorCustomizations": {
     "scrollbar.shadow": "#00000000"
+    // "tab.activeBorderTop": "#00000000"
   },
   "workbench.editor.editorActionsLocation": "default",
   "workbench.editor.showTabs": "multiple",
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
-  "workbench.layoutControl.enabled": false,
+  "workbench.colorTheme": "JetBrains New Dark",
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.productIconTheme": "fluent-icons",
+  "workbench.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
   "workbench.statusBar.visible": true,
   "workbench.tips.enabled": false,
@@ -47,7 +46,7 @@
   "editor.wordWrapColumn": 120,
   // "editor.rulers": [120],
   // "editor.rulers": [72, 80, 100, 120],
-  
+
   // * Terminal:
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorStyle": "line",
@@ -57,9 +56,7 @@
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
-      "args": [
-        "-NoLogo"
-      ]
+      "args": ["-NoLogo"]
     }
   },
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
@@ -70,6 +67,16 @@
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    ".env": ".env*",
+    ".prettierrc": ".prettier*",
+    "*": "${basename}.test.${extname}",
+    "docker-compose*": ".dockerignore, Dockerfile*, dockerfile*",
+    "pyproject.toml": ".python-version, alembic.ini, pdm.lock, Pipfile.lock, uv.lock",
+    "package.json": ".prettier*, eslint*, package-lock.json, playwright*, pnpm-lock.yaml, tsconfig*, vite*, yarn.lock"
+  },
   "explorer.sortOrderLexicographicOptions": "unicode",
 
   // * Files:
@@ -78,7 +85,9 @@
     ".eslintrc": "jsonc",
     ".prettierrc": "jsonc",
     "*.bats": "shellscript",
-    "*.pyi": "python"
+    "*.pyi": "python",
+    "*.css": "css",
+    "css": "css"
   },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
@@ -91,14 +100,11 @@
     "**/.pdm-python": true,
     "**/.pytest_cache": true,
     "**/.ruff_cache": true,
+    "**/.turbo": true,
     "**/.venv": true,
-    "**/.vercel": true,
     "**/.vs": true,
-    "**/*.lock": true,
     "**/bin": true,
-    "**/node_modules/**": true,
-    "**/obj": true,
-    "**/pnpm-lock.yaml": true
+    "**/obj": true
   },
 
   // * Debug:
@@ -124,10 +130,13 @@
 
   // * Python:
   "[python]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "ruff.enable": true,
+  "ruff.nativeServer": "on",
   "python.analysis.autoImportCompletions": true,
-  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.diagnosticMode": "openFilesOnly",
   "python.analysis.diagnosticSeverityOverrides": {
     "reportUnknownVariableType": "none",
     "reportUnknownMemberType": "none",
@@ -136,9 +145,28 @@
   "python.analysis.typeCheckingMode": "strict",
   "python.terminal.activateEnvironment": false,
 
+  // * Web:
+  "[javascript][javascriptreact][typescript][typescriptreact][html][css][json][jsonc][markdown][mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  },
+
+  // * Catppuccin:
+  "catppuccin-icons.associations.files": {
+    "app.config.ts": "solid"
+  },
+  "catppuccin-icons.associations.extensions": {
+    "tsx": "solid"
+  },
+
   // * Security:
   "security.workspace.trust.enabled": false,
 
   // * Telemetry:
   "telemetry.telemetryLevel": "off",
+
+  // * Remote:
+  "remote.autoForwardPortsSource": "hybrid"
 }
