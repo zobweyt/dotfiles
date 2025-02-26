@@ -50,6 +50,7 @@
   // * Terminal:
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "terminal.integrated.fontSize": 14,
