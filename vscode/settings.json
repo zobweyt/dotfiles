@@ -13,8 +13,8 @@
   },
   "workbench.editor.editorActionsLocation": "default",
   "workbench.editor.showTabs": "multiple",
-  "workbench.colorTheme": "JetBrains New Dark",
   "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "JetBrains New Dark",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
@@ -73,7 +73,7 @@
   "explorer.fileNesting.patterns": {
     ".env": ".env*",
     ".prettierrc": ".prettier*",
-    "*": "${basename}.test.${extname}",
+    "*": "${basename}.test.${extname}, ${basename}.spec.${extname}, ${basename}.e2e.spec.${extname}",
     "docker-compose*": ".dockerignore, Dockerfile*, dockerfile*",
     "pyproject.toml": ".python-version, alembic.ini, pdm.lock, Pipfile.lock, uv.lock",
     "package.json": ".prettier*, eslint*, package-lock.json, playwright*, pnpm-lock.yaml, tsconfig*, vite*, yarn.lock"
@@ -83,11 +83,12 @@
   // * Files:
   "files.associations": {
     ".babelrc": "jsonc",
+    ".env*": "properties",
     ".eslintrc": "jsonc",
     ".prettierrc": "jsonc",
     "*.bats": "shellscript",
-    "*.pyi": "python",
     "*.css": "css",
+    "*.pyi": "python",
     "css": "css"
   },
   "files.autoSave": "onFocusChange",
@@ -109,10 +110,16 @@
   },
 
   // * Debug:
+  "debug.openDebug": "neverOpen",
+  "debug.internalConsoleOptions": "neverOpen",
+  "debug.toolBarLocation": "docked",
+  "debug.enableStatusBarColor": false,
+  "debug.hideLauncherWhileDebugging": true,
+  "debug.terminal.clearBeforeReusing": true,
+  "debug.inlineValues": "on",
   "debug.allowBreakpointsEverywhere": true,
   "debug.console.closeOnEnd": true,
   "debug.console.collapseIdenticalLines": true,
-  "debug.inlineValues": "on",
 
   // * Git:
   "git.autofetch": true,
@@ -160,7 +167,7 @@
   },
   "catppuccin-icons.associations.extensions": {
     "tsx": "solid",
-    "jsx": "solid",    
+    "jsx": "solid"
   },
 
   // * Security:
@@ -169,6 +176,9 @@
   // * Telemetry:
   "telemetry.telemetryLevel": "off",
 
+  // * Chat
+  "chat.commandCenter.enabled": false,
+
   // * Remote:
-  "remote.autoForwardPortsSource": "hybrid"
+  "remote.autoForwardPortsSource": "hybrid",
 }
