@@ -9,4 +9,4 @@ zstyle ":fzf-tab:*" switch-group "[" "]"
 
 setopt globdots
 
-source ~/.fzf.zsh
+source <(fzf --zsh)
