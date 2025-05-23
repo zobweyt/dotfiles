@@ -28,7 +28,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 echo "Installing omz..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Installing omz plugins..."
 git clone https://github.com/marlonrichert/zsh-hist.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-hist
