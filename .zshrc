@@ -25,6 +25,11 @@ plugins=(
   fzf-tab
 )
 
+ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
+mkdir -p "$(dirname $ZSH_COMPDUMP)"
+autoload -Uz compinit
+compinit -d "${ZSH_COMPDUMP}"
+
 source "$ZSH/oh-my-zsh.sh"
 
 source "$HOME/.config/zsh/p10k.zsh"
