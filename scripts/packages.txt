@@ -1,0 +1,11 @@
+bat
+curl
+docker
+ffmpeg
+fzf
+neofetch
+onefetch
+tree
+unzip
+zip
+zsh
