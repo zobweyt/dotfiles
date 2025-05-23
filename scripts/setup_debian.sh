@@ -12,6 +12,7 @@ sudo apt update
 
 echo "Installing APT packages..."
 sudo apt install -y $(awk '{print $1}' packages.txt)
+sudo ln -s /usr/bin/batcat /usr/bin/bat
 
 echo "Autoremoving APT packages..."
 sudo apt autoremove -y
