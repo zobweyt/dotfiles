@@ -27,7 +27,7 @@ plugins=(
 
 source "$ZSH/oh-my-zsh.sh"
 
-source "$HOME/.p10k.zsh"
+source "$HOME/.config/zsh/p10k.zsh"
 source "$HOME/.config/zsh/completion.zsh"
 source "$HOME/.config/zsh/history.zsh"
 source "$HOME/.config/zsh/cli/uv.zsh"
