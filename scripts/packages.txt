@@ -1,4 +1,5 @@
 bat
+ca-certificates
 coreutils
 curl
 ffmpeg
