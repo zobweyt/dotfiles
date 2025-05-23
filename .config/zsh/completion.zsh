@@ -4,10 +4,13 @@ zstyle ":completion:*" special-dirs true
 zstyle ":completion:*" ignored-patterns ".|..|.DS_Store|**/.|**/..|**/.DS_Store|**/.git"
 zstyle ":completion:*" ignore-parents "parent pwd directory"
 zstyle ":completion:*" menu no
-zstyle ':completion:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/.zcompcache"
 zstyle ":fzf-tab:complete:(rm|ls|cp|cd|cat|bat):*" fzf-preview 'bat -p -r=:32 --color=always $realpath 2>/dev/null || ls --group-directories-first --color $realpath'
 zstyle ":fzf-tab:*" switch-group "[" "]"
 
 setopt globdots
+
+if [[ ! "$PATH" == *"${HOME}/.fzf/bin"* ]]; then
+  export PATH="${PATH:+${PATH}:}${HOME}/.fzf/bin"
+fi
 
 source <(fzf --zsh)
