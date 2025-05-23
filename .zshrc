@@ -20,6 +20,7 @@ plugins=(
   git
   python
   zsh-hist
+  zsh-256color
   zsh-syntax-highlighting
   zsh-autosuggestions
   fzf-tab
