@@ -24,6 +24,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 echo "Installing nvm..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | PROFILE=/dev/null bash
 
+echo "Installing pnpm..."
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+
 echo "Installing fzf..."
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --no-bash --no-zsh --no-fish --key-bindings --completion --no-update-rc
