@@ -11,7 +11,7 @@ echo "Updating APT indexes..."
 sudo apt update
 
 echo "Installing APT packages..."
-sudo apt install -y $(awk '{print $1}' packages.txt)
+sudo apt install -y bat ca-certificates coreutils curl ffmpeg gnupg neofetch onefetch stow tree unzip zip zsh
 sudo ln -s /usr/bin/batcat /usr/bin/bat
 
 echo "Autoremoving APT packages..."
