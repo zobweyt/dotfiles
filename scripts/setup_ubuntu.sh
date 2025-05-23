@@ -47,5 +47,8 @@ stow -v .
 echo "Setting default shell to zsh..."
 chsh -s /usr/bin/zsh
 
+echo "Removing old files..."
+sudo rm ~/.fzf.bash ~/.fzf.zsh ~/.shell.pre-oh-my-zsh ~/.zcompdump* ~/.zsh_history ~/.zshrc.bak ~/.zshrc.pre-oh-my-zsh
+
 echo "Restarting zsh..."
 zsh
