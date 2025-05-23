@@ -43,5 +43,8 @@ mv ~/.zshrc ~/.zshrc.bak
 echo "Creating symlinks..."
 stow -v .
 
+echo "Setting default shell to zsh..."
+chsh -s /usr/bin/zsh
+
 echo "Restarting zsh..."
 zsh
