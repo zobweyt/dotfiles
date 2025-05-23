@@ -1,4 +1,5 @@
 bat
+cat
 curl
 ffmpeg
 gnupg
