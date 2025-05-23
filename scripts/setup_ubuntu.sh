@@ -11,7 +11,7 @@ echo "Updating APT indexes..."
 sudo apt update
 
 echo "Installing APT packages..."
-sudo apt install -y bat ca-certificates coreutils curl ffmpeg gnupg neofetch onefetch stow tree unzip zip zsh
+sudo apt install bat ca-certificates coreutils curl ffmpeg gnupg neofetch onefetch stow tree unzip zip zsh -y
 sudo ln -s /usr/bin/batcat /usr/bin/bat
 sudo ln -s /usr/bin/python3 /usr/bin/python
 
@@ -45,8 +45,10 @@ mv ~/.zshrc ~/.zshrc.bak
 echo "Creating symlinks..."
 stow -v .
 
-echo "Setting default shell to zsh..."
-chsh -s /usr/bin/zsh
+if [ "$(basename "$SHELL")" != "zsh" ]; then
+  echo "Setting default shell to zsh..."
+  chsh -s /usr/bin/zsh
+fi
 
 echo "Removing old dotfiles..."
 sudo rm ~/.fzf.bash ~/.fzf.zsh ~/.shell.pre-oh-my-zsh ~/.zcompdump* ~/.zsh_history ~/.zshrc.bak ~/.zshrc.pre-oh-my-zsh
