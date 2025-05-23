@@ -52,3 +52,6 @@ sudo rm ~/.fzf.bash ~/.fzf.zsh ~/.shell.pre-oh-my-zsh ~/.zcompdump* ~/.zsh_histo
 
 echo "Restarting zsh..."
 zsh
+
+echo "Changing directory to home..."
+cd ~
