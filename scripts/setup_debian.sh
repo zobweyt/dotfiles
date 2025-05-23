@@ -1,5 +1,11 @@
+echo "Updating APT indexes..."
+sudo apt update
+
+echo "Installing common APT packages..."
+sudo apt install software-properties-common -y
+
 echo "Adding APT repositories..."
-sudo add-apt-repository ppa:o2sh/onefetch
+sudo add-apt-repository ppa:o2sh/onefetch -y
 
 echo "Updating APT indexes..."
 sudo apt update
@@ -32,6 +38,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 echo "Removing previous .zshrc..."
 mv ~/.zshrc ~/.zshrc.bak
+
+echo "Creating symlinks..."
+stow -v .
 
 echo "Restarting zsh..."
 zsh

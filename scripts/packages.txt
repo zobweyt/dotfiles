@@ -4,6 +4,7 @@ ffmpeg
 gnupg
 neofetch
 onefetch
+stow
 tree
 unzip
 zip
