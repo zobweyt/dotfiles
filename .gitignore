@@ -1,3 +1,4 @@
+.config/uv/uv-receipt.json
 .gnupg/private-keys*/
 .gnupg/pubring*
 .gnupg/trustdb.gpg
