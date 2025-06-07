@@ -1,6 +1,6 @@
 alias cl="clear"
 
-alias ls="ls --group-directories-first --color"
+alias ls="gls --group-directories-first --color"
 
 alias cat="bat --paging never --decorations never --plain"
 
