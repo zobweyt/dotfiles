@@ -60,4 +60,4 @@ echo "Changing directory to home..."
 cd ~
 
 echo "Restarting zsh..."
-zsh
+source ~/.zshrc
