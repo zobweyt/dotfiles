@@ -11,7 +11,7 @@ echo "Updating APT indexes..."
 sudo apt update
 
 echo "Installing APT packages..."
-sudo apt install bat ca-certificates coreutils curl ffmpeg gnupg gnupg-agent neofetch onefetch pinentry-curses pinentry-tty stow tree unzip zip zsh -y
+sudo apt install bat ca-certificates coreutils curl eza ffmpeg gnupg gnupg-agent neofetch onefetch pinentry-curses pinentry-tty stow tree unzip zip zsh -y
 sudo ln -s /usr/bin/batcat /usr/bin/bat
 sudo ln -s /usr/bin/python3 /usr/bin/python
 
