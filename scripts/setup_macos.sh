@@ -1,4 +1,4 @@
-brew install bat eza fastfetch folderify gnupg lazygit pinentry pinentry-tty stow tree
+brew install bat eza fastfetch folderify gnupg lazygit onefetch pinentry pinentry-tty stow tree
 
 # Disable startup noise:
 # sudo nvram SystemAudioVolume=%01
