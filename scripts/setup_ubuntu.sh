@@ -54,7 +54,7 @@ if [ "$(basename "$SHELL")" != "zsh" ]; then
 fi
 
 echo "Removing old dotfiles..."
-sudo rm ~/.fzf.bash ~/.fzf.zsh ~/.shell.pre-oh-my-zsh ~/.zcompdump* ~/.zsh_history ~/.zshrc.bak ~/.zshrc.pre-oh-my-zsh
+sudo rm ~/.fzf.bash ~/.fzf.zsh ~/.shell.pre-oh-my-zsh ~/.zcompdump* ~/.zsh_history ~/.zshrc.pre-oh-my-zsh
 
 echo "Changing directory to home..."
 cd ~
