@@ -22,3 +22,5 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 
+./shared/install.sh
+./shared/finish.sh
