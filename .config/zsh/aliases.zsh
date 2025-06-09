@@ -1,4 +1,6 @@
 alias cl="clear"
+alias сд="clear"
+alias сдуфк="clear"
 
 alias ls="eza --group-directories-first"
 
