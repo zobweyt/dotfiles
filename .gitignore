@@ -1,3 +1,4 @@
+.DS_Store
 .config/uv/uv-receipt.json
 .gnupg/private-keys*/
 .gnupg/pubring*
