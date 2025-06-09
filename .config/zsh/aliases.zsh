@@ -1,6 +1,6 @@
 alias cl="clear"
 
-alias ls="eza --group-directories-first --color"
+alias ls="eza --group-directories-first"
 
 alias cat="bat --paging never --decorations never --plain"
 
