@@ -10,3 +10,5 @@ alias gg="lazygit"
 
 alias nsh="nix-shell --run zsh"
 alias nix-shell="nix-shell --run zsh"
+
+alias speedtest="networkQuality"
