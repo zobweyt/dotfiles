@@ -12,3 +12,5 @@ alias nsh="nix-shell --run zsh"
 alias nix-shell="nix-shell --run zsh"
 
 alias speedtest="networkQuality"
+
+alias reload="source ~/.zshrc"
