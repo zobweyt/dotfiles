@@ -22,5 +22,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 
+# Disable CapsLock delay
+hidutil property --set '{"CapsLockDelayOverride":0}'
+
 ./shared/install.sh
 ./shared/finish.sh
