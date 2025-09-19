@@ -1,0 +1,57 @@
+[general]
+working_directory = "/"
+
+[window]
+dimensions = { columns = 72, lines = 24 }
+padding = { x = 8, y = 8 }
+opacity = 1
+blur = true
+
+[terminal]
+shell = "pwsh --noLogo"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+size = 13
+
+[colors.primary]
+foreground = "#cccccc"
+background = "#202020"
+
+[colors.normal]
+black = "#000000"
+red = "#cd3131"
+green = "#0dbc79"
+yellow = "#e5e510"
+blue = "#2472c8"
+magenta = "#bc3fbc"
+cyan = "#11a8cd"
+white = "#e5e5e5"
+
+[colors.bright]
+black = "#666666"
+red = "#f14c4c"
+green = "#23d18b"
+yellow = "#f5f543"
+blue = "#3b8eea"
+magenta = "#d670d6"
+cyan = "#29b8db"
+white = "#e5e5e5"
+
+[keyboard]
+bindings = [
+  { key = "V", mods = "Control", action = "Paste" },
+  { key = "М", mods = "Control", action = "Paste" },
+  { key = "C", mods = "Control", action = "Copy" },
+  { key = "С", mods = "Control", action = "Copy" },
+  { key = "C", mods = "Control|Shift", chars = "\u0003" },
+  { key = "W", mods = "Control", action = "Quit" },
+  { key = "Ц", mods = "Control", action = "Quit" },
+  { key = "T", mods = "Control", action = "CreateNewWindow" },
+  { key = "Е", mods = "Control", action = "CreateNewWindow" },
+  { key = "PageUp", action = "ScrollPageUp" },
+  { key = "PageDown", action = "ScrollPageDown" },
+  { key = "Backspace", mods = "Alt", chars = "\u0017" },
+  { key = "Backspace", mods = "Control", chars = "\u0017" },
+  { key = "Delete", mods = "Shift", action = "ClearHistory" },
+]
