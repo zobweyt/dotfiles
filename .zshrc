@@ -8,7 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+# export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -37,8 +37,8 @@ source "$HOME/.config/zsh/p10k.zsh"
 source "$HOME/.config/zsh/completion.zsh"
 source "$HOME/.config/zsh/history.zsh"
 source "$HOME/.config/zsh/cli/docker.zsh"
-source "$HOME/.config/zsh/cli/uv.zsh"
-source "$HOME/.config/zsh/cli/nvm.zsh"
-source "$HOME/.config/zsh/cli/pnpm.zsh"
-source "$HOME/.config/zsh/cli/angular.zsh"
+# source "$HOME/.config/zsh/cli/uv.zsh"
+# source "$HOME/.config/zsh/cli/nvm.zsh"
+# source "$HOME/.config/zsh/cli/pnpm.zsh"
+# source "$HOME/.config/zsh/cli/angular.zsh"
 source "$HOME/.config/zsh/aliases.zsh"
