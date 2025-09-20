@@ -6,6 +6,7 @@ set -g fish_greeting
 
 # Theme
 
+# https://fishshell.com/docs/current/interactive.html#syntax-highlighting-variables
 set -g fish_color_normal normal
 set -g fish_color_command green
 set -g fish_color_param white
@@ -30,6 +31,7 @@ set -g fish_color_host_remote yellow
 set -g fish_color_user brgreen
 set -g fish_color_cancel -r
 
+# https://fishshell.com/docs/current/interactive.html#pager-color-variables
 set -g fish_pager_color_prefix normal --bold --underline
 set -g fish_pager_color_completion normal
 set -g fish_pager_color_description yellow
