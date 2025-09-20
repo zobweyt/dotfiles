@@ -22,7 +22,7 @@ alias cat="bat --paging never --decorations never --plain"
 
 alias grep="rg"
 
-alias reload="source ~/.config/fish/config.fish"
+alias reload="source $__fish_config_dir/config.fish"
 
 # Path
 
