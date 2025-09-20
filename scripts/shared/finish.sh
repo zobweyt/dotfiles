@@ -1,19 +1,16 @@
-echo "Creating a backup of previous .zshrc..."
-mv ~/.zshrc ~/.zshrc.pre-zobweyt-dotfiles
-
 echo "Creating symlinks..."
 stow -v .
 
-if [ "$(basename "$SHELL")" != "zsh" ]; then
-  echo "Setting default shell to zsh..."
-  chsh -s /usr/bin/zsh
-fi
+if [ "$(basename "$SHELL")" != "fish" ]; then
+  echo "Adding fish to approved shells..."
+  sudo sh -c 'echo "$(which fish)" >> /etc/shells'
 
-echo "Removing old dotfiles..."
-sudo rm ~/.fzf.bash ~/.fzf.zsh ~/.shell.pre-oh-my-zsh ~/.zcompdump* ~/.zsh_history ~/.zshrc.pre-oh-my-zsh
+  echo "Setting default shell to zsh..."
+  chsh -s $(which fish)
+fi
 
 echo "Changing directory to home..."
 cd ~
 
-echo "Restarting zsh..."
-source ~/.zshrc
+echo "Restarting fish..."
+source ~/.config/fish/config.fish

@@ -25,5 +25,4 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # Disable CapsLock delay
 hidutil property --set '{"CapsLockDelayOverride":0}'
 
-./shared/install.sh
 ./shared/finish.sh
