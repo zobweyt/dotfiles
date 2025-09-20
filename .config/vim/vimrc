@@ -1,7 +1,9 @@
 syntax enable
+
 filetype on
 
+set number
 set scrolloff=5
-set noswapfile
 
-set viminfo="NONE"
+set noswapfile
+set viminfofile=NONE
