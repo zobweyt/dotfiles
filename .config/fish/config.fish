@@ -44,7 +44,9 @@ bind tab complete-and-search
 
 # Aliases
 
+alias c="clear"
 alias cl="clear"
+alias "с"="clear"
 alias "сд"="clear"
 alias "сдуфк"="clear"
 
@@ -53,8 +55,6 @@ alias gg="lazygit"
 alias ls="eza --group-directories-first"
 
 alias cat="bat --paging never --decorations never --plain"
-
-alias grep="rg"
 
 alias reload="source $__fish_config_dir/config.fish"
 
