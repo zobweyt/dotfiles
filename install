@@ -1,0 +1,62 @@
+#!/bin/sh
+
+# Create directories
+mkdir -p ~/.config/fish/ ~/.config/git/ ~/.gnupg/ ~/.config/tmux/ ~/.config/zsh/
+
+# Create symlinks
+ln -sf ~/.dotfiles/programs/fish/config.fish ~/.config/fish/config.fish
+ln -sf ~/.dotfiles/programs/git/config ~/.config/git/config
+ln -sf ~/.dotfiles/programs/git/ignore ~/.config/git/ignore
+ln -sf ~/.dotfiles/programs/gpg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+ln -sf ~/.dotfiles/programs/tmux/tmux.conf ~/.config/tmux/tmux.conf
+ln -sf ~/.dotfiles/programs/zsh/.zshrc ~/.zshrc
+
+# Install brew packages
+brew bundle install --file ~/.dotfiles/programs/homebrew/Brewfile
+
+# Disable startup sound:
+# sudo nvram StartupMute=%01
+
+# Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool true
+
+# Disable CapsLock delay
+# hidutil property --set '{"CapsLockDelayOverride":0}'
+
+# Show Library folder
+chflags nohidden ~/Library
+
+# Set default shell to fish
+FISH_PATH=$(which fish 2>/dev/null || command -v fish)
+
+if [ -z "$FISH_PATH" ] || [ ! -f "$FISH_PATH" ]; then
+  echo "error: fish not found in \$PATH"
+  exit 1
+fi
+
+if ! grep -q "^$FISH_PATH$" /etc/shells; then
+  echo "Adding $FISH_PATH to /etc/shells"
+  sudo sh -c "echo $FISH_PATH >> /etc/shells"
+fi
+
+if [ "$(basename "$SHELL")" != "fish" ]; then
+  echo "Setting default shell to $FISH_PATH"
+  chsh -s "$FISH_PATH"
+fi
+
+# Configure fish
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install IlanCosman/tide@v6"
+
+fish -c "tide configure --auto --style=Lean --prompt_colors='True color' --show_time=No --lean_prompt_height='One line' --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
+
+exec fish

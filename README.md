@@ -1,19 +1,16 @@
-# zobweyt's dotfiles
+# zobweyt's dotfiles for darwin
 
-Add symlinks to parent dir
+## Prerequisites
 
-```bash
-stow -v .
+- [git](https://git-scm.com)
+- [brew](https://brew.sh)
+
+## Quick start
+
+```sh
+git clone https://github.com/zobweyt/dotfiles.git ~/.dotfiles
 ```
 
-Remove symlinks from home
-
-```bash
-stow -R -v -t ~ .
-```
-
-Remove symlinks from parent dir
-
-```bash
-stow -R -v ~ .
+```sh
+~/.dotfiles/install
 ```

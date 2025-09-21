@@ -1,10 +1,7 @@
-export GPG_TTY=$(tty)
-
 # Settings
-
 set -g fish_greeting
 
-# Theme
+set -g EDITOR nvim
 
 # https://fishshell.com/docs/current/interactive.html#syntax-highlighting-variables
 set -g fish_color_normal normal
@@ -39,11 +36,9 @@ set -g fish_pager_color_progress brwhite --background=cyan
 set -g fish_pager_color_secondary_background
 
 # Bindings
-
 bind tab complete-and-search
 
 # Aliases
-
 alias c="clear"
 alias cl="clear"
 alias "с"="clear"
@@ -58,6 +53,9 @@ alias cat="bat --paging never --decorations never --plain"
 
 alias reload="source $__fish_config_dir/config.fish"
 
-# Path
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
 
+# Paths
 fish_add_path "/opt/homebrew/bin/"
