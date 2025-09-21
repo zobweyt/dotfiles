@@ -11,3 +11,6 @@ gpgsign = true
 
 [init]
 defaultBranch = main
+
+[gpg]
+program = /opt/homebrew/bin/gpg
