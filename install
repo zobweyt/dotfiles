@@ -5,6 +5,7 @@ mkdir -p ~/.config/fish/ ~/.config/git/ ~/.gnupg/ ~/.config/tmux/ ~/.config/zsh/
 
 # Create symlinks
 ln -sf ~/.dotfiles/programs/fish/config.fish ~/.config/fish/config.fish
+ln -sf ~/.dotfiles/programs/fish/fish_plugins ~/.config/fish/fish_plugins
 ln -sf ~/.dotfiles/programs/git/config ~/.config/git/config
 ln -sf ~/.dotfiles/programs/git/ignore ~/.config/git/ignore
 ln -sf ~/.dotfiles/programs/gpg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
@@ -54,9 +55,14 @@ if [ "$(basename "$SHELL")" != "fish" ]; then
   chsh -s "$FISH_PATH"
 fi
 
-# Configure fish
-fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install IlanCosman/tide@v6"
+# Update fisher plugins
+fish -c "fisher update"
 
 fish -c "tide configure --auto --style=Lean --prompt_colors='True color' --show_time=No --lean_prompt_height='One line' --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
 
-exec fish
+# Switch to fish shell or reload
+if [ "$(basename "$SHELL")" == "fish" ]; then
+  fish -c "source ~/.config/fish/config.fish"
+else
+  exec fish
+fi
