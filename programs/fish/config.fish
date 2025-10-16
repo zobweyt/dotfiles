@@ -59,3 +59,11 @@ alias vim="nvim"
 
 # Paths
 fish_add_path "/opt/homebrew/bin/"
+
+# Interactive shell
+status --is-interactive; and begin
+  # Only add newline if previous command wasn't clear
+  function postexec_newline --on-event fish_postexec
+    contains -- $argv[1] c cl clear с сд сдуфк || echo
+  end
+end
