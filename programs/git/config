@@ -1,3 +1,6 @@
+[core]
+quotePath = false
+
 [user]
 name = Nikita Gaziev
 email = zobweyt@gmail.com
