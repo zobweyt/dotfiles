@@ -1,6 +1,8 @@
 tap "jorgelbg/tap"
+tap "oven-sh/bun"
 tap "xwmx/taps"
 brew "bat"
+brew "bun"
 brew "cmatrix"
 brew "eza"
 brew "fastfetch"
