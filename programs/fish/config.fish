@@ -35,6 +35,9 @@ set -g fish_pager_color_description yellow
 set -g fish_pager_color_progress brwhite --background=cyan
 set -g fish_pager_color_secondary_background
 
+# https://github.com/IlanCosman/tide/issues/622
+set -U fish_key_bindings fish_default_key_bindings
+
 # Bindings
 bind tab complete-and-search
 
