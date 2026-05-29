@@ -4,7 +4,7 @@ quotePath = false
 [user]
 name = Nikita Gaziev
 email = zobweyt@gmail.com
-signingkey = CB18F885C9B85085
+signingkey = /Users/zobweyt/.ssh/id_ed25519.pub
 
 [commit]
 gpgsign = true
@@ -19,9 +19,13 @@ autoSetupRemote = true
 defaultBranch = main
 
 [gpg]
-program = /opt/homebrew/bin/gpg
+format = ssh
+
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+
+[gpg "ssh"]
+allowedSignersFile = /Users/zobweyt/.ssh/allowed_signers
