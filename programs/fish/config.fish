@@ -38,6 +38,10 @@ set -g fish_pager_color_secondary_background
 # https://github.com/IlanCosman/tide/issues/622
 set -U fish_key_bindings fish_default_key_bindings
 
+# Homebrew
+set -gx HOMEBREW_NO_ENV_HINTS 1
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+
 # Bindings
 bind tab complete-and-search
 
@@ -74,3 +78,6 @@ end
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+
+# uv
+fish_add_path "/Users/zobweyt/.local/bin"
